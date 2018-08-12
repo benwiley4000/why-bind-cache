@@ -14,17 +14,24 @@ import {
   Text
 } from 'spectacle';
 
+import Interactive from '../assets/interactive';
+
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
 // Require CSS
 require('normalize.css');
 
+const blue = '#29adff';
+const white = '#fff1e8';
+const darkBlue = '#1d2b53';
+const black = '#000000';
+
 const theme = createTheme({
-  primary: 'white',
-  secondary: '#1F2022',
-  tertiary: '#03A9FC',
-  quarternary: '#CECECE'
+  primary: blue,
+  secondary: white,
+  tertiary: darkBlue,
+  quaternary: black
 }, {
   primary: 'Montserrat',
   secondary: 'Helvetica'
@@ -33,7 +40,12 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
+      <Deck
+        transition={['zoom', 'slide']}
+        transitionDuration={500}
+        theme={theme}
+        progress="bar"
+      >
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Spectacle Boilerplate
@@ -65,6 +77,12 @@ export default class Presentation extends React.Component {
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
           </BlockQuote>
+        </Slide>
+        <Slide transition={['slide']} bgColor="primary">
+          <Heading size={1} caps fit textColor="tertiary">
+            Your presentations are interactive
+          </Heading>
+          <Interactive/>
         </Slide>
       </Deck>
     );
