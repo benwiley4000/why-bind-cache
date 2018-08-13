@@ -1,5 +1,6 @@
 // Import React
 import React from 'react';
+import bindCache from '@benwiley4000/bind-cache';
 
 // Import Spectacle Core tags
 import {
@@ -11,10 +12,13 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  ComponentPlayground
 } from 'spectacle';
 
 import Interactive from '../assets/interactive';
+
+import sampleCode from '!raw-loader!./code_samples/1_basic_app.js';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -83,6 +87,14 @@ export default class Presentation extends React.Component {
             Your presentations are interactive
           </Heading>
           <Interactive/>
+        </Slide>
+        <Slide bgColor="primary">
+          <ComponentPlayground
+            code={sampleCode}
+            scope={{ bindCache }}
+            previewBackgroundColor={darkBlue}
+            onCodeChange={console.log}
+          />
         </Slide>
       </Deck>
     );
