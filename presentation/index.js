@@ -35,7 +35,7 @@ class BindCachePresentation extends PureComponent {
 
   render() {
     return (
-      <Deck theme={theme} progress="bar">
+      <Deck theme={theme} progress="bar" transition={['fade']}>
         {slides.map((SlideComponent, i) => <SlideComponent key={i} />)}
       </Deck>
     );
