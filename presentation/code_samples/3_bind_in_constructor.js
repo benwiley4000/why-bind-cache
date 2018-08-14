@@ -32,7 +32,7 @@ class MyApp extends React.Component {
    <div style={{
     width: '100%',
     minHeight: 400,
-    border: '2px solid white',
+    border: `2px solid ${black}`,
     backgroundColor: bgColor
    }}>
     <h1>Current count: {count}</h1>
@@ -49,7 +49,8 @@ class MyApp extends React.Component {
 render(<MyApp />);
 
 function randomIntensity() {
- return Math.floor(Math.random() * 128);
+ // random color in the lighter range
+ return 128 + Math.floor(Math.random() * 128);
 }
 
 function randomBgColor() {
@@ -79,7 +80,8 @@ class MyButton extends React.PureComponent {
      fontFamily: 'courier',
      padding: 10,
      fontSize: 16,
-     borderRadius: 6
+     borderRadius: 6,
+     backgroundColor: white
     }}
     onClick={onClick}
    >

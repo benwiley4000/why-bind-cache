@@ -1,102 +1,45 @@
-// Import React
-import React from 'react';
-import bindCache from '@benwiley4000/bind-cache';
+import React, { PureComponent } from 'react';
 
-// Import Spectacle Core tags
-import {
-  BlockQuote,
-  Cite,
-  Deck,
-  Heading,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text,
-  ComponentPlayground
-} from 'spectacle';
-
-import Interactive from '../assets/interactive';
-
-import sampleCode from '!raw-loader!./code_samples/1_basic_app.js';
-
-// Import theme
+import { Deck } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
 
-// Require CSS
-require('normalize.css');
+import { blue, white, darkBlue, black } from './colors';
+import slides from './slides';
 
-const blue = '#29adff';
-const white = '#fff1e8';
-const darkBlue = '#1d2b53';
-const black = '#000000';
+import 'normalize.css';
 
 const theme = createTheme({
   primary: blue,
-  secondary: white,
+  secondary: black,
   tertiary: darkBlue,
-  quaternary: black
+  quaternary: white
 }, {
   primary: 'Montserrat',
   secondary: 'Helvetica'
 });
 
-export default class Presentation extends React.Component {
+class BindCachePresentation extends PureComponent {
+  componentDidMount() {
+    this.codeStyle = document.createElement('style');
+    this.codeStyle.innerText = `
+      code {
+        color: ${white} !important;
+      }
+    `;
+    document.body.appendChild(this.codeStyle);
+  }
+
+  componentWillUnmount() {
+    document.body.removeChild(this.codeStyle);
+  }
+
   render() {
     return (
-      <Deck
-        transition={['zoom', 'slide']}
-        transitionDuration={500}
-        theme={theme}
-        progress="bar"
-      >
-        <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide transition={['slide']} bgColor="primary">
-          <Heading size={1} caps fit textColor="tertiary">
-            Your presentations are interactive
-          </Heading>
-          <Interactive/>
-        </Slide>
-        <Slide bgColor="primary">
-          <ComponentPlayground
-            code={sampleCode}
-            scope={{ bindCache }}
-            previewBackgroundColor={darkBlue}
-            onCodeChange={console.log}
-          />
-        </Slide>
+      <Deck theme={theme} progress="bar">
+        {slides.map((SlideComponent, i) => <SlideComponent key={i} />)}
       </Deck>
     );
   }
 }
+
+export default BindCachePresentation;
