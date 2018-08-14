@@ -12,7 +12,7 @@ class Slide_5_2_ButtonList extends PureComponent {
         code={sampleCode}
         aboveText={'"Sure, that\'ll be easy."'}
         belowText="Wait.. everything's screwed up again!"
-        lineHighlights="7,11,14,45-64"
+        lineHighlights="7,14-20,58-80"
       />
     );
   }

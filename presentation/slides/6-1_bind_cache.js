@@ -12,7 +12,7 @@ class Slide_6_1_BindCache extends PureComponent {
         code={sampleCode}
         aboveText="Bind cache to the rescue!"
         belowText="The investors are thrilled"
-        lineHighlights="9,24-29,56"
+        lineHighlights="9-10,30-37,69-72"
       />
     );
   }

@@ -4,7 +4,7 @@ import CodePlaygroundSlide from './CodePlaygroundSlide';
 
 import sampleCode from '!raw-loader!../code_samples/3_bind_in_constructor.js';
 
-class Slide_3_BindInConstructor extends PureComponent {
+class Slide_3_1_BindInConstructor extends PureComponent {
   render() {
     return (
       <CodePlaygroundSlide
@@ -12,10 +12,10 @@ class Slide_3_BindInConstructor extends PureComponent {
         code={sampleCode}
         aboveText="Binding the method in the constructor"
         belowText=".. it works, but it's ugly"
-        lineHighlights="8,40"
+        lineHighlights="8-10,53-55"
       />
     );
   }
 }
 
-export default Slide_3_BindInConstructor;
+export default Slide_3_1_BindInConstructor;
