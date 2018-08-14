@@ -1,12 +1,14 @@
-class MyApp extends Component {
+class App extends Component {
  constructor(props) {
   super(props);
   this.state = {
    count: 0,
    bgColor: randomBgColor()
   };
-  // note: class properties not
-  // available with this compiler!
+  // note:
+  // class properties not
+  // available with this
+  // compiler!
   this.changeColor = () => {
    this.setState({
     bgColor: randomBgColor()
@@ -15,29 +17,42 @@ class MyApp extends Component {
  }
 
  componentDidMount() {
-  this.interval = setInterval(() => {
-   this.setState(({count}) => ({
-    count: count + 1
-   }));
-  }, 1000);
+  this.interval =
+   setInterval(() => {
+    this.setState(
+     ({count}) => ({
+      count: count + 1
+     })
+    );
+   }, 1000);
  }
 
  componentWillUnmount() {
-  clearInterval(this.interval);
+  clearInterval(
+   this.interval
+  );
  }
 
  render() {
-  const {count, bgColor} = this.state;
+  const {
+   count,
+   bgColor
+  } = this.state;
   return (
    <div style={{
     width: '100%',
     minHeight: 400,
-    border: `2px solid ${black}`,
+    border:
+     `2px solid ${black}`,
     backgroundColor: bgColor
    }}>
-    <h1>Current count: {count}</h1>
+    <h1>
+     Current count: {count}
+    </h1>
     <MyButton
-     onClick={this.changeColor}
+     onClick={
+      this.changeColor
+     }
     >
      New background color
     </MyButton>
@@ -46,10 +61,11 @@ class MyApp extends Component {
  }
 }
 
-render(<MyApp />);
+render(<App />);
 
 function randomIntensity() {
- // random color in the lighter range
+ // random color
+ // in lighter range
  return 128 + Math.floor(
   Math.random() * 128
  );
@@ -57,8 +73,9 @@ function randomIntensity() {
 
 function randomBgColor() {
  let colorString = 'rgb(';
- for (let i = 0; i < 3; i++) {
-  colorString += randomIntensity();
+ for (let i=0; i<3; i++) {
+  colorString +=
+   randomIntensity();
   if (i < 2) {
    colorString += ',';
   }
@@ -67,15 +84,22 @@ function randomBgColor() {
  return colorString;
 }
 
-const fourBillion = 4000000000; 
+const fourBillion =
+ 4000000000; 
 const doBigMath = false;
 
-class MyButton extends PureComponent {
+class MyButton
+ extends PureComponent {
  render() {
   if (doBigMath) {
-   for (let i = 0; i<fourBillion; i++);
+   // count to 4 billion
+   for (let i=0;
+    i<fourBillion; i++);
   }
-  const {onClick, children} = this.props;
+  const {
+   onClick,
+   children
+  } = this.props;
   return (
    <button
     style={{

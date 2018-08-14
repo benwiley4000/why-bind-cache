@@ -12,7 +12,7 @@ class Slide_2_2_TryingPureComponent extends PureComponent {
         code={sampleCode}
         aboveText="MyButton is now a PureComponent..."
         belowText="But that doesn't fix the problem"
-        lineHighlights={70}
+        lineHighlights="89-90"
       />
     );
   }
