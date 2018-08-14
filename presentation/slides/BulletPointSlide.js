@@ -1,15 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Slide, Heading, Appear, List, ListItem, Code, Text } from 'spectacle';
+import { Appear, List, ListItem, Code, Text } from 'spectacle';
 
-import { blue, white, black } from '../colors';
+import HeadingWithContentSlide from './HeadingWithContentSlide';
+import { blue } from '../colors';
 
 class BulletPointSlide extends PureComponent {
   render() {
     const { title, children, ...rest } = this.props;
     return (
-      <Slide {...rest} bgColor={black}>
-        <Heading size={4} textColor={white}>{title}</Heading>
+      <HeadingWithContentSlide {...rest} title={title}>
         <List>
           {/* convert `code` markup to Code tags */}
           {children.map((bulletPoint, i) =>
@@ -24,7 +24,7 @@ class BulletPointSlide extends PureComponent {
             </Appear>
           )}
         </List>
-      </Slide>
+      </HeadingWithContentSlide>
     );
   }
 }
