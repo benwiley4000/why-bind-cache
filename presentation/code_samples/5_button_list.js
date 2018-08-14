@@ -8,7 +8,7 @@ class MyApp extends React.Component {
   };
   // note: class properties not
   // available with this compiler!
-  this.changeBgColor = btnIndex => {
+  this.changeColor = btnIndex => {
    this.setState({
     bgColor: randomBgColor(),
     lastClickedBtn: btnIndex + 1
@@ -48,7 +48,7 @@ class MyApp extends React.Component {
       buttons.push(
        <MyButton
         key={i}
-        onClick={this.changeBgColor.bind(this, i)}
+        onClick={this.changeColor.bind(this, i)}
        >
         New background color
        </MyButton>

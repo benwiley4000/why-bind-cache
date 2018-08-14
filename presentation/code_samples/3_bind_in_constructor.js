@@ -5,7 +5,7 @@ class MyApp extends React.Component {
    count: 0,
    bgColor: randomBgColor()
   };
-  this.changeBgColor = this.changeBgColor.bind(this);
+  this.changeColor = this.changeColor.bind(this);
  }
 
  componentDidMount() {
@@ -20,7 +20,7 @@ class MyApp extends React.Component {
   clearInterval(this.interval);
  }
 
- changeBgColor() {
+ changeColor() {
   this.setState({
    bgColor: randomBgColor()
   });
@@ -37,7 +37,7 @@ class MyApp extends React.Component {
    }}>
     <h1>Current count: {count}</h1>
     <MyButton
-     onClick={this.changeBgColor}
+     onClick={this.changeColor}
     >
      New background color
     </MyButton>

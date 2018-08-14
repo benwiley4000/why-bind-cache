@@ -25,7 +25,7 @@ class MyApp extends React.Component {
   clearInterval(this.interval);
  }
 
- changeBgColor(btnIndex) {
+ changeColor(btnIndex) {
   this.setState({
    bgColor: randomBgColor(),
    lastClickedBtn: btnIndex + 1
@@ -52,7 +52,7 @@ class MyApp extends React.Component {
       buttons.push(
        <MyButton
         key={i}
-        onClick={this.bind(this.changeBgColor, i)}
+        onClick={this.bind(this.changeColor, i)}
        >
         New background color
        </MyButton>

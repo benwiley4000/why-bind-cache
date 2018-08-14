@@ -7,7 +7,7 @@ class MyApp extends React.Component {
   };
   // note: class properties not
   // available with this compiler!
-  this.changeBgColor = () => {
+  this.changeColor = () => {
    this.setState({
     bgColor: randomBgColor()
    });
@@ -37,7 +37,7 @@ class MyApp extends React.Component {
    }}>
     <h1>Current count: {count}</h1>
     <MyButton
-     onClick={this.changeBgColor}
+     onClick={this.changeColor}
     >
      New background color
     </MyButton>
