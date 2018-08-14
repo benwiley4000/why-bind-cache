@@ -1,4 +1,4 @@
-class MyApp extends React.Component {
+class MyApp extends Component {
  constructor(props) {
   super(props);
   this.state = {
@@ -49,7 +49,9 @@ render(<MyApp />);
 
 function randomIntensity() {
  // random color in the lighter range
- return 128 + Math.floor(Math.random() * 128);
+ return 128 + Math.floor(
+  Math.random() * 128
+ );
 }
 
 function randomBgColor() {

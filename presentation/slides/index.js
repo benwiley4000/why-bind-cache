@@ -8,6 +8,14 @@ import Slide_4_1_ArrowMethod from './4-1_arrow_method';
 import Slide_4_2_ProblemsWithArrows from './4-2_problems_with_arrows';
 import Slide_4_3_BadArrowsExample from './4-3_bad_arrows_example';
 import Slide_4_4_BadArrowsExample2 from './4-4_bad_arrows_example_2';
+import Slide_5_1_NewProductRequest from './5-1_new_product_request';
+import Slide_5_2_ButtonList from './5-2_button_list';
+import Slide_5_3_BiggestProblem from './5-3_biggest_problem';
+import Slide_6_1_BindCache from './6-1_bind_cache';
+import Slide_6_2_BindCacheStrengths from './6-2_bind_cache_strengths';
+import Slide_6_3_BindCacheCode from './6-3_bind_cache_code';
+import Slide_6_4_Install from './6-4_install';
+import Slide_7_Questions from './7_questions';
 
 export default [
   Slide_0_Title,
@@ -19,5 +27,13 @@ export default [
   Slide_4_1_ArrowMethod,
   Slide_4_2_ProblemsWithArrows,
   Slide_4_3_BadArrowsExample,
-  Slide_4_4_BadArrowsExample2
+  Slide_4_4_BadArrowsExample2,
+  Slide_5_1_NewProductRequest,
+  Slide_5_2_ButtonList,
+  Slide_5_3_BiggestProblem,
+  Slide_6_1_BindCache,
+  Slide_6_2_BindCacheStrengths,
+  Slide_6_3_BindCacheCode,
+  Slide_6_4_Install,
+  Slide_7_Questions
 ];

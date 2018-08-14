@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { CodePane } from 'spectacle';
 
 import StaticCodeSlide from './StaticCodeSlide';
 

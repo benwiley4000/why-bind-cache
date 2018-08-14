@@ -16,7 +16,7 @@ class StaticCodeSlide extends PureComponent {
 }
 
 StaticCodeSlide.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   lang: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired
 };

@@ -12,7 +12,7 @@ class Slide_4_1_ArrowMethod extends PureComponent {
         code={sampleCode}
         aboveText={'The "arrow method" approach'}
         belowText="relies on class properties proposal"
-        lineHighlights="8-14"
+        lineHighlights="8-15"
       />
     );
   }

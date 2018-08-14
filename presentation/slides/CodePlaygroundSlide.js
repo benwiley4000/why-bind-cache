@@ -7,7 +7,7 @@ import bindCache from '@benwiley4000/bind-cache';
 
 import { blue, white, darkBlue, black } from '../colors';
 
-const scope = { bindCache, blue, white, darkBlue, black };
+const scope = { bindCache, PureComponent, blue, white, darkBlue, black };
 
 function hexToRgbValues(hexString) {
   return [1, 3, 5]
@@ -97,7 +97,6 @@ class CodePlaygroundSlide extends PureComponent {
         lineHeight
       );
     });
-    this.highlights[0].scrollIntoViewIfNeeded();
   }
 
   removeLineHighlights() {
