@@ -15,9 +15,10 @@
   "license": "MIT",
   "dependencies": {
     "@benwiley4000/bind-cache": "^0.1.3",
+    "multi-integer-range": "^4.0.6",
     "normalize.css": "7.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "spectacle": "github:benwiley4000/spectacle#memoize-playground-scope-with-build",
     "spectacle-renderer": "^0.0.3"
   },
