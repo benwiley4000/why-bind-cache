@@ -11,7 +11,7 @@ class Slide_2_2_TryingPureComponent extends PureComponent {
         {...this.props}
         code={sampleCode}
         aboveText="MyButton is now a PureComponent..."
-        belowText="But that doesn't fix the problem."
+        belowText="But that doesn't fix the problem"
         lineHighlights={70}
       />
     );
