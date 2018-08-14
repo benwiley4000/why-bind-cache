@@ -18,7 +18,7 @@
     "normalize.css": "7.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "spectacle": "github:benwiley4000/spectacle#change-error-callbacks-fork",
+    "spectacle": "github:benwiley4000/spectacle#memoize-playground-scope-with-build",
     "spectacle-renderer": "^0.0.3"
   },
   "devDependencies": {
