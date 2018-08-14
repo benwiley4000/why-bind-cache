@@ -4,7 +4,7 @@ import CodePlaygroundSlide from './CodePlaygroundSlide';
 
 import sampleCode from '!raw-loader!../code_samples/3_bind_in_constructor.js';
 
-class Slide_3_BindInConstructor extends PureComponent {
+class Slide_3_1_BindInConstructor extends PureComponent {
   render() {
     return (
       <CodePlaygroundSlide
@@ -18,4 +18,4 @@ class Slide_3_BindInConstructor extends PureComponent {
   }
 }
 
-export default Slide_3_BindInConstructor;
+export default Slide_3_1_BindInConstructor;
