@@ -17,6 +17,8 @@ import Slide_6_2_BindCacheStrengths from './6-2_bind_cache_strengths';
 import Slide_6_3_BindCacheCode from './6-3_bind_cache_code';
 import Slide_6_4_Install from './6-4_install';
 import Slide_7_Questions from './7_questions';
+import Slide_8_Thanks from './8_thanks';
+import Slide_9_Also from './9_also';
 
 export default [
   Slide_0_Title,
@@ -37,5 +39,7 @@ export default [
   Slide_6_2_BindCacheStrengths,
   Slide_6_3_BindCacheCode,
   Slide_6_4_Install,
-  Slide_7_Questions
+  Slide_7_Questions,
+  Slide_8_Thanks,
+  Slide_9_Also
 ];
